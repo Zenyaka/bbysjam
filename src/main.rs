@@ -74,9 +74,11 @@ fn main() {
     app.run();
 }
 
-fn setup(mut commands: Commands) {
-    commands.spawn_bundle(Camera3dBundle {
-        transform: Transform::from_xyz(20.0, 20.0, 20.0).looking_at(Vec3::ZERO, Vec3::Y),
+fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+    commands.spawn_bundle(Camera2dBundle::default());
+    commands.spawn_bundle(SpriteBundle {
+        texture: asset_server.load("sprites/frame-1.png"),
+        transform: Transform::from_scale(Vec3 { x: 0.2, y: 0.2, z: 0.2 }),
         ..default()
     });
 }
