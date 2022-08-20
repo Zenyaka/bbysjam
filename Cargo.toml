@@ -1,5 +1,5 @@
 [package]
-name = "bbysjam"
+name = "monstrocities"
 version = "1.0.0"
 authors = ["Casey Bailey <SonicZentropy@gmail.com>"]
 edition = "2021"
@@ -7,7 +7,9 @@ resolver = "2"
 
 [dependencies]
 anyhow = "^1.0"
-ron = "0.8.0"
-bevy = { version = "0.8.0", default-features = false, features = ["dynamic", "animation", "bevy_asset", "bevy_audio", "bevy_gltf", "bevy_scene", "bevy_winit", "render", "png", "hdr", "vorbis", "x11", "filesystem_watcher"] }
-
+ron = "0.8"
+serde = { version = "1", features = ["derive"] }
 winit = "0.27.2"
+bevy = { version = "0.8.0", default-features = false, features = ["dynamic", "animation", "bevy_asset", "bevy_audio", "bevy_gltf", "bevy_scene", "bevy_winit", "render", "png", "hdr", "vorbis", "x11", "filesystem_watcher"] }
+bevy_proto = "0.5.0"
+bevy-inspector-egui = "0.12.1"
